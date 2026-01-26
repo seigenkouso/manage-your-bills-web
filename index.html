@@ -33,21 +33,19 @@
             align-items: center;
             position: relative;
             flex-shrink: 0;
+            padding: 0 1rem; /* 增加移动端两侧安全边距 */
         }
 
         .app-gradient {
             background: linear-gradient(135deg, #02b59c 0%, #005bea 100%);
-        }
-        .text-app-theme {
-            background: linear-gradient(135deg, #02b59c 0%, #005bea 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .content-box { 
             opacity: 0; 
             transform: translateY(30px); 
             transition: all 0.8s ease 0.4s; 
+            width: 100%;
+            max-width: 48rem; /* 限制最大宽度，防止 PC 端拉得过开 */
         }
         .active .content-box { 
             opacity: 1; 
@@ -61,36 +59,36 @@
 
     <div id="main-wrapper">
         
-        <section class="section bg-white px-6 active">
-            <div class="content-box text-center">
-                <div class="mb-8">
+        <section class="section bg-white active">
+            <div class="content-box text-center px-4">
+                <div class="mb-6 md:mb-8">
                     <img src="https://seigenkouso.github.io/manage-your-bills-web/assets/app_logo.png" 
                         alt="Manage Your Bills Logo" 
-                        class="w-24 h-24 md:w-32 md:h-32 rounded-[2rem] shadow-2xl mx-auto border-4 border-white">
+                        class="w-20 h-20 md:w-32 md:h-32 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl mx-auto border-4 border-white">
                 </div>
                 
-                <h1 class="text-5xl font-extrabold tracking-tight mb-4 text-slate-900">
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 leading-tight">
                     Manage Your Bills 记账
                 </h1>
-                <p class="text-xl text-slate-500 mb-12 font-medium">为 Android 用户量身打造的账单记录 APP。</p>
+                <p class="text-base md:text-xl text-slate-500 mb-8 md:mb-12 font-medium">为 Android 用户量身打造的账单记录 APP。</p>
                 
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#" class="flex items-center bg-black text-white px-8 py-3 rounded-2xl hover:bg-slate-800 transition shadow-lg">
-                        <i class="fab fa-google-play text-2xl mr-3 text-white"></i>
+                <div class="flex flex-col md:flex-row justify-center items-stretch md:items-center gap-3 md:gap-4 px-4 md:px-0">
+                    <a href="#" class="flex items-center justify-center bg-black text-white px-6 py-3 rounded-2xl hover:bg-slate-800 transition shadow-lg">
+                        <i class="fab fa-google-play text-xl md:text-2xl mr-3"></i>
                         <div class="text-left">
                             <div class="text-[10px] uppercase opacity-60">Get it on</div>
                             <div class="text-sm font-bold">Google Play</div>
                         </div>
                     </a>
-                    <a href="https://github.com/seigenkouso/ManageYourBills" class="flex items-center bg-slate-100 px-8 py-3 rounded-2xl border border-slate-200 hover:bg-slate-200 transition">
-                        <i class="fab fa-github text-2xl mr-3 text-slate-700"></i>
+                    <a href="https://github.com/seigenkouso/ManageYourBills" class="flex items-center justify-center bg-slate-100 px-6 py-3 rounded-2xl border border-slate-200">
+                        <i class="fab fa-github text-xl md:text-2xl mr-3 text-slate-700"></i>
                         <div class="text-left">
                             <div class="text-[10px] text-slate-400 uppercase">View Source</div>
                             <div class="text-sm font-bold text-slate-700">GitHub</div>
                         </div>
                     </a>
-                    <a href="https://github.com/seigenkouso/ManageYourBills/releases/download/v1.0.3/ManageYourBills-v1.0.3.apk" class="flex items-center app-gradient text-white px-8 py-3 rounded-2xl hover:opacity-90 transition shadow-xl shadow-teal-100">
-                        <i class="fas fa-download text-xl mr-3"></i>
+                    <a href="https://github.com/seigenkouso/ManageYourBills/releases/download/v1.0.3/ManageYourBills-v1.0.3.apk" class="flex items-center justify-center app-gradient text-white px-6 py-3 rounded-2xl shadow-xl shadow-teal-100">
+                        <i class="fas fa-download text-lg md:text-xl mr-3"></i>
                         <div class="text-left">
                             <div class="text-[10px] opacity-70 uppercase font-bold">Direct</div>
                             <div class="text-sm font-bold">Download APK</div>
@@ -99,70 +97,77 @@
                 </div>
             </div>
 
-            <div class="absolute bottom-10 animate-bounce text-slate-300 text-center">
-                <i class="fas fa-chevron-down text-xl"></i>
+            <div class="absolute bottom-6 md:bottom-10 animate-bounce text-slate-300">
+                <i class="fas fa-chevron-down text-lg md:text-xl"></i>
             </div>
         </section>
 
-        <section class="section bg-slate-50 px-6">
-            <div class="content-box max-w-2xl w-full">
-                <div class="text-center mb-12">
-                    <span class="bg-teal-50 text-teal-600 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Release Notes</span>
-                    <h2 class="text-4xl font-bold mt-4 text-slate-800">更新日志</h2>
+        <section class="section bg-slate-50">
+            <div class="content-box px-4">
+                <div class="text-center mb-8 md:mb-12">
+                    <span class="bg-teal-50 text-teal-600 text-[10px] md:text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Release Notes</span>
+                    <h2 class="text-2xl md:text-4xl font-bold mt-3 text-slate-800">更新日志</h2>
                 </div>
                 
-                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100">
-                    <div class="flex items-center justify-between mb-8">
-                        <span class="font-bold text-2xl text-slate-800">v1.0.3</span>
-                        <span class="text-sm text-slate-400 font-medium">2026-01-26</span>
+                <div class="bg-white p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-sm border border-slate-100 mx-auto max-w-lg">
+                    <div class="flex items-center justify-between mb-6 md:mb-8">
+                        <span class="font-bold text-xl md:text-2xl text-slate-800">v1.0.3</span>
+                        <span class="text-xs md:text-sm text-slate-400 font-medium">2026-01-26</span>
                     </div>
                     
-                    <ul class="space-y-5">
-                        <li class="flex items-center"> <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-4"> <i class="fas fa-check text-[10px] text-teal-500"></i>
+                    <ul class="space-y-4 md:space-y-5">
+                        <li class="flex items-center">
+                            <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-3 md:mr-4">
+                                <i class="fas fa-check text-[8px] md:text-[10px] text-teal-500"></i>
                             </div>
-                            <span class="text-slate-600 leading-relaxed">优化交互，防止账单被误删。</span>
+                            <span class="text-sm md:text-base text-slate-600">优化交互，防止账单被误删。</span>
                         </li>
-                        <li class="flex items-center"> <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-4"> <i class="fas fa-check text-[10px] text-teal-500"></i>
+                        <li class="flex items-center">
+                            <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-3 md:mr-4">
+                                <i class="fas fa-check text-[8px] md:text-[10px] text-teal-500"></i>
                             </div>
-                            <span class="text-slate-600 leading-relaxed">新增更新注意事项。</span>
+                            <span class="text-sm md:text-base text-slate-600">新增更新注意事项。</span>
                         </li>
-                        <li class="flex items-center"> <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-4"> <i class="fas fa-check text-[10px] text-teal-500"></i>
+                        <li class="flex items-center">
+                            <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-3 md:mr-4">
+                                <i class="fas fa-check text-[8px] md:text-[10px] text-teal-500"></i>
                             </div>
-                            <span class="text-slate-600 leading-relaxed">新增官方网站。</span>
+                            <span class="text-sm md:text-base text-slate-600">新增官方网站。</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="section app-gradient text-white px-6">
-            <div class="content-box max-w-4xl w-full">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold">注意事项</h2>
+        <section class="section app-gradient text-white">
+            <div class="content-box px-4">
+                <div class="text-center mb-8 md:mb-12">
+                    <h2 class="text-2xl md:text-4xl font-bold">注意事项</h2>
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="p-8 rounded-[2rem] bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/15 transition">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-user-shield text-2xl text-teal-200 mr-4"></i>
-                            <h3 class="text-xl font-bold">隐私与权限</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-h-[70vh] overflow-y-auto no-scrollbar">
+                    <div class="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-white/10 border border-white/20 backdrop-blur-md">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-user-shield text-xl text-teal-200 mr-3"></i>
+                            <h3 class="text-lg md:text-xl font-bold">隐私与权限</h3>
                         </div>
-                        <p class="text-sm text-teal-50/90 leading-relaxed">您的财务隐私仅属于您自己。在当前版本中，本应用不需要任何敏感权限（如读取联系人、定位等），为您提供最纯粹的记账环境。所有账单数据均通过 Room 数据库存储在您手机的私有沙盒中。我们没有设立服务器，也绝不会上传您的任何财务记录。应用无需联网即可运行，这意味着您的每一笔支出和收入，除了您，没有任何人能够知晓。</p>
+                        <p class="text-xs md:text-sm text-teal-50/90 leading-relaxed">您的财务隐私仅属于您自己。应用不需要任何敏感权限（如定位、联系人等）。数据通过 Room 数据库存储在手机私有沙盒中。我们不设服务器，绝不上传记录，完全离线运行。</p>
                     </div>
                     
-                    <div class="p-8 rounded-[2rem] bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/15 transition">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-database text-2xl text-teal-200 mr-4"></i>
-                            <h3 class="text-xl font-bold">【必读‼️】如何防止数据丢失？</h3>
+                    <div class="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-white/10 border border-white/20 backdrop-blur-md">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-database text-xl text-teal-200 mr-3"></i>
+                            <h3 class="text-lg md:text-xl font-bold">数据安全</h3>
                         </div>
-                        <p class="text-sm text-teal-50/90 leading-relaxed">由于数据存储在您的设备本地，请务必注意以下更新逻辑以保护您的账单：
-                        <p class="text-sm text-teal-50/90 leading-relaxed">✅ 覆盖安装：当您在 GitHub 下载了新版本 APK 时，请直接点击安装并选择“更新”。系统会替换应用代码，但会完整保留您的账单数据库。
-                        <p class="text-sm text-teal-50/90 leading-relaxed">❌ 严禁先卸载再安装：请勿为了安装新版本而手动卸载旧版本。Android 系统在卸载应用时会同步抹除该应用的所有私有数据（包括数据库），且无法找回。</p>
+                        <div class="space-y-2">
+                            <p class="text-xs md:text-sm text-teal-50/90"><span class="font-bold text-white">✅ 覆盖安装：</span>从 GitHub 下载新版本后直接点击“更新”。系统会替换代码并保留您的账单数据库。</p>
+                            <p class="text-xs md:text-sm text-teal-50/90"><span class="font-bold text-white text-rose-300">❌ 严禁卸载：</span>请勿先卸载旧版本。Android 卸载时会同步抹除所有私有数据，且无法找回。</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mt-24 pt-8 border-t border-white/10 text-center opacity-60">
-                    <p class="text-xs tracking-widest uppercase">&copy; 2026 Manage Your Bills · Seigenkouso Lun </p>
+                <div class="mt-8 md:mt-24 pt-6 border-t border-white/10 text-center opacity-60">
+                    <p class="text-[10px] tracking-widest uppercase">&copy; 2026 Manage Your Bills · Seigenkouso Lun</p>
                 </div>
             </div>
         </section>
@@ -180,13 +185,8 @@
             
             isMoving = true;
             currentIndex = index;
-
             wrapper.style.transform = `translateY(-${currentIndex * 100}vh)`;
-
-            sections.forEach((s, i) => {
-                s.classList.toggle('active', i === currentIndex);
-            });
-
+            sections.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
             setTimeout(() => { isMoving = false; }, 1100); 
         }
 
@@ -209,6 +209,5 @@
             if (e.key === 'ArrowUp') goToSection(currentIndex - 1);
         });
     </script>
-
 </body>
 </html>
