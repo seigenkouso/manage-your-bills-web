@@ -33,7 +33,7 @@
             align-items: center;
             position: relative;
             flex-shrink: 0;
-            padding: 0 1rem; /* 增加移动端两侧安全边距 */
+            padding: 0 1rem; 
         }
 
         .app-gradient {
@@ -45,7 +45,7 @@
             transform: translateY(30px); 
             transition: all 0.8s ease 0.4s; 
             width: 100%;
-            max-width: 48rem; /* 限制最大宽度，防止 PC 端拉得过开 */
+            max-width: 48rem; 
         }
         .active .content-box { 
             opacity: 1; 
@@ -106,29 +106,26 @@
                 
                 <div class="bg-white p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-sm border border-slate-100 mx-auto max-w-lg">
                     <div class="flex items-center justify-between mb-6 md:mb-8">
-                        <span class="font-bold text-xl md:text-2xl text-slate-800">v1.0.3</span>
+                        <span class="font-bold text-xl md:text-2xl text-slate-800">v1.1.0</span>
                         <span class="text-xs md:text-sm text-slate-400 font-medium">2026-01-27</span>
                     </div>
                     
                     <ul class="space-y-4 md:space-y-5">
+
                         <li class="flex items-center">
                             <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-3 md:mr-4">
                                 <i class="fas fa-check text-[8px] md:text-[10px] text-teal-500"></i>
                             </div>
-                            <span class="text-sm md:text-base text-slate-600">优化交互，防止账单被误删。</span>
+                            <span class="text-sm md:text-base text-slate-600">优化关于页。</span>
                         </li>
+
                         <li class="flex items-center">
                             <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-3 md:mr-4">
                                 <i class="fas fa-check text-[8px] md:text-[10px] text-teal-500"></i>
                             </div>
-                            <span class="text-sm md:text-base text-slate-600">新增更新注意事项。</span>
+                            <span class="text-sm md:text-base text-slate-600">新增 AI 识别账单截图（需联网）。</span>
                         </li>
-                        <li class="flex items-center">
-                            <div class="flex-shrink-0 bg-teal-50 p-1.5 rounded-full mr-3 md:mr-4">
-                                <i class="fas fa-check text-[8px] md:text-[10px] text-teal-500"></i>
-                            </div>
-                            <span class="text-sm md:text-base text-slate-600">新增官方网站。</span>
-                        </li>
+
                     </ul>
                 </div>
             </div>
